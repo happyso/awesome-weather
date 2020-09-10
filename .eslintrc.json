@@ -1,0 +1,28 @@
+
+{
+  "extends": ["prettier", "airbnb"], //"airbnb"
+    "env": { //eslint 환경설정
+      "browser": true,
+      "es6": true
+    },
+    "globals": { //전역 변수
+      "document": true,
+      "window": true //readonly: 변수를 덮어 쓰거나 덮어 쓰기를 허용하지 않을경우 writable: 변수 덮어쓰기 허용 off : 전역비활성화
+    },
+    "parser": "babel-eslint",
+    "parserOptions": { //자바스크립트 버전, 모듈 사용 여부 등을 설정
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "plugins": ["import", "eslint-plugin-html"],
+    "rules": { //eslint 룰 설정
+      "quotes": [
+        2,
+        "single",
+        {
+          "avoidEscape": true,
+          "allowTemplateLiterals": true
+        }
+      ]
+    }
+}
